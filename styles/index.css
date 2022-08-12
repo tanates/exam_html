@@ -86,9 +86,12 @@ html {
   border-radius: 5px;
 }
 .d {
-  margin-top: 5%;
+  margin-left: -15px;
 }
+
 .btn_3d {
+  display: flex;
+  text-align: center;
   margin-top: -12.8%;
   border: 2px solid #bca56a;
   border-radius: 6.5%;
@@ -235,15 +238,127 @@ html {
 
   color: #ffff;
 }
-.nav_m {
-  position: absolute;
+
+/*borger-minu*/
+.minu_img{
+  margin-top: -0.2%;
+  background-color: #3d3c3c;
   width: 80px;
   height: 80px;
-  left: 0px;
-  top: 0px;
-  background-color: #3d3c3c;
 }
 
+.burger-menu_button {
+  margin-top: -1px;
+  position: fixed;
+  z-index: 30;
+  width: 80px;
+  height: 80px;
+  background-color: #3d3c3c;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.burger-menu_button:hover .burger-menu_lines {
+  filter: brightness(0.7);
+}
+
+.burger-menu_button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.burger-menu_lines::before,
+.burger-menu_lines::after,
+.burger-menu_lines {
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color:  #FFFFFF;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.burger-menu_lines {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.burger-menu_lines::before {
+  content: '';
+  top: -12px;
+}
+.burger-menu_lines::after {
+  content: '';
+  top: 12px;
+}
+
+
+.burger-menu_active .burger-menu_lines {
+  background-color: transparent;
+}
+.burger-menu_active .burger-menu_lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger-menu_active .burger-menu_lines::after{
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-menu_nav {
+  padding-top: 120px;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: #F9AFE9;
+  overflow-y: auto;
+  right: -100%;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+}
+.burger-menu_active .burger-menu_nav {
+  right: 0;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.burger-menu_link {
+  padding: 18px 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 400;
+  color: #BB1E99;
+  border-bottom: 1px solid #fff;
+}
+.burger-menu_link:first-child {
+  border-top: 1px solid #fff;
+}
+.burger-menu_link:hover {
+  filter: brightness(0.9);
+}
+.burger-menu_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+.burger-menu_active .burger-menu_overlay {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .top {
   position: relative;
   width: 100%;
@@ -253,23 +368,23 @@ html {
   background-color: white;
 }
 .complecs_div {
+  z-index: 1;
   position: absolute;
   width: 116px;
   height: 24px;
   left: 10%;
   top: 34px;
-
   font-family: "Euclid Circular B";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
   /* identical to box height, or 171% */
-
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 .blog_div {
+  z-index: 1;
   position: absolute;
   width: 43px;
   height: 24px;
@@ -287,6 +402,7 @@ html {
   text-transform: uppercase;
 }
 .faq_div {
+  z-index: 1;
   position: absolute;
   width: 32px;
   height: 24px;
@@ -303,6 +419,7 @@ html {
   text-transform: uppercase;
 }
 .contacts_div {
+  z-index: 1;
   position: absolute;
   width: 87px;
   height: 24px;
@@ -484,17 +601,7 @@ html {
   max-width: 70em;
   transform: translate(0, -5%);
 }
-#flower_2 {
-  position: relative;
-  z-index: 2;
-  float: right;
-  margin-left: 100%;
-  margin: 0 auto;
-  width: 85%;
-  height: 100%;
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
+
 #flower_1 {
   position: relative;
   z-index: 2;
@@ -531,18 +638,17 @@ html {
   top: 27px;
 }
 .key_div {
-  margin-top: -1%;
+  margin-top: 2%;
   text-align: center;
   align-items: center;
-  position: relative;
+  position: absolute;
   z-index: 1;
   width: 100px;
-  height: 20%;
-  float: right;
-  margin-right: 20%;
+  height: 10px;
+  margin-left: 80%;
   color: #ffffff;
 }
-.key {
+#key {
   margin-top: 50px;
   margin-left: -30px;
   width: 15px;
