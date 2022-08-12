@@ -203,13 +203,13 @@ html {
 .namber {
   width: 117px;
   height: 24px;
-  margin-left: 80px;
+  margin-left: 100px;
   font-family: "Euclid Circular B";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 24px;
-  margin-top: -25px;
+  margin-top: -24px;
   /* identical to box height, or 171% */
 
   text-align: right;
@@ -221,7 +221,7 @@ html {
 .login {
   width: 44px;
   height: 24px;
-  top: 12px;
+
   left: 23px;
   font-family: "Euclid Circular B";
   font-style: normal;
@@ -233,7 +233,7 @@ html {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: #ffff;
 }
 .nav_m {
   position: absolute;
@@ -419,6 +419,7 @@ html {
   background: #ffffff;
   border: 1px solid #e3e3e3;
 }
+
 .nav_minu {
   position: absolute;
   max-width: 1200px;
@@ -483,7 +484,18 @@ html {
   max-width: 70em;
   transform: translate(0, -5%);
 }
-.flower {
+#flower_2 {
+  position: relative;
+  z-index: 2;
+  float: right;
+  margin-left: 100%;
+  margin: 0 auto;
+  width: 85%;
+  height: 100%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+#flower_1 {
   position: relative;
   z-index: 2;
   float: right;
@@ -519,16 +531,20 @@ html {
   top: 27px;
 }
 .key_div {
+  margin-top: -1%;
+  text-align: center;
+  align-items: center;
   position: relative;
   z-index: 1;
-  width: 15px;
-  height: 8px;
+  width: 100px;
+  height: 20%;
   float: right;
   margin-right: 20%;
+  color: #ffffff;
 }
 .key {
-  margin-top: 30px;
-  margin-left: -20px;
+  margin-top: 50px;
+  margin-left: -30px;
   width: 15px;
   height: 8px;
 }
@@ -672,14 +688,14 @@ a {
   height: 232px;
   margin-left: -4%;
   margin-top: -8%;
-  background-image: url("images/1.png ");
+  background-image: url("../images/1.png");
 }
 .container_2 {
   width: 360px;
   height: 232px;
   margin-left: 33%;
   margin-top: -21%;
-  background-image: url("images/2.png ");
+  background-image: url("../images/2.png ");
 }
 .opis_2 {
   position: absolute;
